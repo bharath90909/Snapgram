@@ -1,10 +1,10 @@
-export type INavLink = {
+export type NavLink = {
   imgURL: string;
   route: string;
   label: string;
 };
 
-export type IUpdateUser = {
+export type UpdateUser = {
   userId: string;
   name: string;
   bio: string;
@@ -13,7 +13,7 @@ export type IUpdateUser = {
   file: File[];
 };
 
-export type INewPost = {
+export type NewPost = {
   userId: string;
   caption: string;
   file: File[];
@@ -21,7 +21,7 @@ export type INewPost = {
   tags?: string;
 };
 
-export type IUpdatePost = {
+export type UpdatePost = {
   postId: string;
   caption: string;
   imageId: string;
@@ -31,7 +31,7 @@ export type IUpdatePost = {
   tags?: string;
 };
 
-export type IUser = {
+export type User = {
   id: string;
   name: string;
   username: string;
@@ -40,7 +40,7 @@ export type IUser = {
   bio: string;
 };
 
-export type INewUser = {
+export type NewUser = {
   name: string;
   email: string;
   username: string;

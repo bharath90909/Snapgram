@@ -1,14 +1,15 @@
-import type { INewUser } from "@/types";
+import type { NewUser } from "@/types";
 import { account } from "./config";
 import { ID } from "appwrite";
 
-export async function createUserAccount(user: INewUser) {
+export async function createUserAccount(user: NewUser) {
   try {
+    //we should pass in the exact same order of user details
     const newAccount = await account.create(
       ID.unique(),
-      user.name,
       user.email,
-      user.password
+      user.password,
+      user.name
     );
     return newAccount;
   } catch (error) {
